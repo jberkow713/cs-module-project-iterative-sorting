@@ -68,19 +68,18 @@ def selection_sort(arr):
 #    return(arr)            
 
 def bubble_sort(arr):
-
-    # this says i goes from the length of the (array-1) because you dont swap
-    #last element since it will be swapped with by previous element if necessary,
-    # so i gets smaller, 0 = the ending point for i, and -1 = the steps, so
-    # if the array = len(10), i = 9,8,7,6,5,4,3,2,1,0,
-    # you then run the actual code loop j, inside of the decreasing outer loop,
-    # so element gets pushed to the end of the list, loop gets 1 smaller, repeat until
-    # at front of list
+   
     for i in range (len(arr)-1, 0, -1):
         for j in range(i):
 
 # scroll through the list, and swap one element with next element, if the first
 # element is bigger than 2nd, then repeat
+# it will go to element 0, and check to see is element 0 > element 1? 
+# if so, swap them. Then it will go to element 1, say is element 1> element 2? 
+# if so swap them, and as the outer list gets smaller,
+# and reduces its length by 1,  the inner loop will run again, and again
+#  and this will repeat until the length of the list is 1,
+# and the elements will be sorted, and it will return the array
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
